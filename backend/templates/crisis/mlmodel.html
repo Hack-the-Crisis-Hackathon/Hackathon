@@ -3,11 +3,15 @@
 {% load static %}
 {% block body_block %}
 <div class="jumbotron">
+  <button onclick="location.href='{% url 'notify' %}'"type="button" name="button" class="btn btn-primary">Send Notification</button>
+  <br>
+  <br>
   {% for value in a %}
     <img src="{% static value %}" alt="">
     <br>
     <br>
   {% endfor %}
+  
 </div>
-<p>Stay away from this area</p>
+
 {% endblock %}
