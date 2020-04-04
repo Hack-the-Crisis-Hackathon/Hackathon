@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 {% extends 'crisis/base.html' %}
+{% load static %}
 {% block body_block %}
 <div class="jumbotron">
-  {% for (a,b) in context %}
-  <img src="{{b}}" alt="">
-  {% endfor %}
+  <img src="{% static 'result0003.jpg' %}" alt="">
 </div>
+<p>Stay away from this area</p>
 {% endblock %}
