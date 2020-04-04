@@ -57,18 +57,9 @@ import os
 #         self.default_graph.close()
 
 def mlmodel(request):
-    # v = sam()
-    # print (v)
     for files in os.walk('results/'):
        print(files)
-
-    # context['s'] = v
-    context = dict()
-    i = 0
-    for file in files[2]:
-        context[i] = 'results/' + file
-        print('backend/results/' + file)
-    return render(request,'crisis/mlmodel.html',context)
+    return render(request,'crisis/mlmodel.html',{'a':files[2]})
 
 def special(request,pk):
     obj = get_object_or_404(Document,pk=pk)
