@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/',views.register,name='register'),
     path('<int:pk>/special/',views.special,name='special'),
+    path('mlmodel/',views.mlmodel,name='mlmodel'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

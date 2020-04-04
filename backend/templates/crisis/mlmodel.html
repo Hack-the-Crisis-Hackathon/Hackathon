@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{% extends 'crisis/base.html' %}
+{% block body_block %}
+<div class="jumbotron">
+  {% for (a,b) in context %}
+  <img src="{{b}}" alt="">
+  {% endfor %}
+</div>
+{% endblock %}

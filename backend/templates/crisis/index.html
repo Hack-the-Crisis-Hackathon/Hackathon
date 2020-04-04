@@ -21,7 +21,7 @@
  	<tr>
  		<td><a href="{% url 'special' pk=ob.pk %}"><h3>{{ob.name}}</h3></a></td>
  		<td><h4>{{ob.description}}</h4></td>
-    <td><a href="#"><h3>Apply</h3></a></td>  
+    <td><a href="{% url 'mlmodel' %}"><h3>Apply</h3></a></td>  
  	</tr>
   {% endfor %}
  </tbody>
