@@ -26,8 +26,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/',views.register,name='register'),
     path('<int:pk>/special/',views.special,name='special'),
-    path('mlmodel/',views.mlmodel,name='mlmodel'),
-    path('notify/',views.notify,name='notify'),
+    path('image3/',views.image3,name='image3'),
+    path('image2/',views.image2,name='image2'),
+    path('notify1/',views.notify1,name='notify1'),
+    path('notify2/',views.notify2,name='notify2'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

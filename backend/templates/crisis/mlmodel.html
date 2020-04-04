@@ -3,15 +3,17 @@
 {% load static %}
 {% block body_block %}
 <div class="jumbotron">
-  <button onclick="location.href='{% url 'notify' %}'"type="button" name="button" class="btn btn-primary">Send Notification</button>
+  {% if b == "1" %}
+    <button onclick="location.href='{% url 'notify1' %}'"type="button" name="button" class="btn btn-primary">Send Notification</button>
+  {% else %}
+    <button onclick="location.href='{% url 'notify2' %}'"type="button" name="button" class="btn btn-primary">Send Notification</button>
+  {% endif %}
   <br>
   <br>
-  {% for value in a %}
-    <img src="{% static value %}" alt="">
-    <br>
-    <br>
-  {% endfor %}
-  
+  <img src="{% static img %}" alt="">
+  <br>
+  <br>
+
 </div>
 
 {% endblock %}
