@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'crisis/base.html' %}
+{% load static %}
+
+{% block body_block %}
+<div class="jumbotron">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+  <br>
+  <p><a href="{% url 'index' %}">Return to home</a></p>
+</div>
+{% endblock %}

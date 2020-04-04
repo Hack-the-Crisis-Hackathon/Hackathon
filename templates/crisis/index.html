@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends 'crisis/base.html' %}
+{% block navbar %}
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'register' %}">REGISTER</a>
+  </li>
+{% endblock%}
+
+{% block body_block %}
+<div class="jumbotron">
+<table border="1">
+  <thead>
+ 	 	<tr>
+			<th><h3>Image Link</h3></th>
+			<th><h3>People Count</h3></th>
+ 		</tr>
+  </thead>
+ <tbody>
+  {% for ob in obj %}
+ 	<tr>
+ 		<td><a href="{% url 'special' pk=ob.pk %}"><h3>{{ob.name}}</h3></a></td>
+ 		<td><h4>{{ob.description}}</h4></td>
+ 	</tr>
+  {% endfor %}
+ </tbody>
+</table>
+</div>
+{% endblock %}
