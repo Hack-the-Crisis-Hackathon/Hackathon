@@ -5,7 +5,7 @@ from django.db import models
 class Document(models.Model):
     name = models.CharField(max_length=255, blank=False, default="Some Image")
     description = models.CharField(max_length=255, blank=True)
-    document = models.FileField(upload_to='profile_pics')
+    document = models.FileField(upload_to='test')
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
